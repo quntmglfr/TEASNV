@@ -1,0 +1,58 @@
+#:kivy 1.10.1
+
+#:import sitesscreen sitesscreen
+
+<SitesScreen>:
+    id: _sites_screen
+    name: 'sitesscreen'
+    GridLayout:
+        padding: 20
+        spacing: 20
+        rows: 3
+        Button:
+            text: 'Custom'
+            on_press: app.open_settings()
+        Button:
+            text: 'ATH PD-1'
+            on_press: root.set_site(host='172.31.21.215', port='23', password='tea1160')
+        Button:
+            text: 'BRL PD-1'
+            on_press: root.set_site(host='172.31.150.110', port='23', password='tea1160')
+        Button:
+            text: 'BRL PD-2'
+            on_press: root.set_site(host='172.31.150.111', port='23', password='tea1160')
+        Button:
+            text: 'DCY PD-1'
+            on_press: root.set_site(host='172.31.35.17', port='23', password='lightfoot')
+        Button:
+            text: 'DCY PD-2'
+            on_press: root.set_site(host='172.31.35.18', port='23', password='lightfoot')
+        Button:
+            text: 'FD CTL-3'
+            on_press: root.set_site(host='192.168.241.3', port='23', password='lightfoot')
+        Button:
+            text: 'FD CMD-31'
+            on_press: root.set_site(host='192.168.241.4', port='23', password='lightfoot')
+        Button:
+            text: 'HIL PD-1'
+            on_press: root.set_site(host='172.31.149.200', port='23', password='tea1160')
+        Button:
+            text: 'RWC PD-1'
+            on_press: root.set_site(host='172.31.144.110', port='23', password='tea1160')
+        Button:
+            text: 'RWC PD-2'
+            on_press: root.set_site(host='172.31.144.111', port='23', password='tea1160')
+        Button:
+            text: 'RWC PD-3'
+            on_press: root.set_site(host='172.31.144.112', port='23', password='tea1160')
+        Button:
+            text: 'SSF DPW-1'
+            on_press: root.set_site(host='172.31.153.111', port='23', password='tea1160')
+        Button:
+            text: 'SSF PD-1'
+            on_press: root.set_site(host='172.31.153.110', port='23', password='lightfoot')
+        Button:
+            bold: True
+            text: 'BACK'
+            underline: True
+            on_press: root.screen_manager.manager.current = 'snvscreen'

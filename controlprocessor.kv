@@ -1,0 +1,45 @@
+#:kivy 1.10.1
+
+#:import controlprocessor controlprocessor
+
+<ControlProcessor>:
+    orientation: 'vertical'
+    padding: 5
+    spacing: 5
+    link_indicator: _link
+    host_label: _host
+    connection_button: _connection
+    master_indicator: _master
+    expansion1_indicator: _exp1
+    expansion2_indicator: _exp2
+    fault_indicator: _fault
+    Indicator:
+        id: _link
+        text: 'LINK'
+        led_color: 'green'
+    Label:
+        id: _host
+        text: ''
+    ToggleButton:
+        id: _connection
+        bold: True
+        text: 'CON'
+        on_state: root.connection(*args)
+    Indicator:
+        id: _master
+        text: 'MSTR'
+        led_color: 'green'
+    Indicator:
+        id: _exp1
+        text: 'EXP1'
+        led_color: 'orange'
+    Indicator:
+        id: _exp2
+        text: 'EXP2'
+        led_color: 'orange'
+    Indicator:
+        id: _fault
+        text: 'FAULT'
+        led_color: 'red'
+    Label:
+        text: ''

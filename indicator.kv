@@ -1,0 +1,17 @@
+#:kivy 1.9.1
+
+#:import indicator indicator
+
+<LED@Image>:
+    source: 'led-circle-grey.png'
+
+<Indicator>:
+    orientation: 'vertical'
+    indicator_label: _indicator_label
+    indicator_led: _indicator_led
+    Label:
+        id: _indicator_label
+        text: root.text
+    LED:
+        id: _indicator_led
+

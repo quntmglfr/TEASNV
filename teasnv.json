@@ -1,0 +1,27 @@
+[
+	{
+		"type": "title", 
+		"title": "Network"
+	},
+	{
+		"type": "string",
+		"title": "Host",
+		"desc": "Hostname or IP Address",
+		"section": "network",
+		"key": "host"
+	},
+	{
+		"type": "string",
+		"title": "Port",
+		"desc": "Host port to connect",
+		"section": "network",
+		"key": "port"
+	},
+	{
+		"type": "string",
+		"title": "Password",
+		"desc": "Password to supply to host",
+		"section": "network",
+		"key": "password"
+	}
+]

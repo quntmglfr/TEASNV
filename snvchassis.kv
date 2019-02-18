@@ -1,0 +1,50 @@
+#:kivy 1.10.1
+
+#:import snvchassis snvchassis
+
+<SnvChassis>:
+    id: _snv_chassis
+    orientation: 'horizontal'
+    RelativeLayout:
+        site_number: 0
+        Button:
+            on_press: root.screen_manager.manager.current = 'sitesscreen'
+            on_press: _control_processor.connection_button.state = 'normal'
+        Label:
+            bold: True
+            text: root.channel_name
+            canvas.before:
+                PushMatrix
+                Rotate:
+                    angle: 90
+                    origin: self.center
+            canvas.after:
+                PopMatrix
+    ControlProcessor:
+        id: _control_processor
+        snv_chassis: root
+        site_number: 0
+    SiteVoter:
+        site_number: 1
+    SiteVoter:
+        site_number: 2
+    SiteVoter:
+        site_number: 3
+    SiteVoter:
+        site_number: 4
+    SiteVoter:
+        site_number: 5
+    SiteVoter:
+        site_number: 6
+    SiteVoter:
+        site_number: 7
+    SiteVoter:
+        site_number: 8
+    SiteVoter:
+        site_number: 9
+    SiteVoter:
+        site_number: 10
+    SiteVoter:
+        site_number: 11
+    SiteVoter:
+        site_number: 12

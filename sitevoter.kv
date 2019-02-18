@@ -1,0 +1,57 @@
+#:kivy 1.10.1
+
+#:import sitevoter sitevoter
+
+<SiteVoter>:
+    orientation: 'vertical'
+    padding: 5
+    spacing: 5
+    disabled: True
+    tx_select_indicator: _tx_select
+    state_spinner: _state
+    signal_quality_meter: _signal_quality
+    voted_indicator: _voted
+    unsquelched_indicator: _unsquelched
+    ptt_indicator: _ptt
+    fault_indicator: _fault
+    Indicator:
+        id: _tx_select
+        text: 'TX SEL'
+        led_color: 'red'
+    Spinner:
+        id: _state
+        bold: True
+        text: 'NORM'
+        text_autoupdate: True
+        values: ('SEL', 'NRML', 'DSBL')
+    ProgressBar:
+        id: _signal_quality
+        max: 31
+        value: root.signal_quality
+    Indicator:
+        id: _voted
+        text: 'VOTE'
+        led_color: 'green'
+    Indicator:
+        id: _unsquelched
+        text: 'UNSQ'
+        led_color: 'green'
+    Indicator:
+        id: _ptt
+        text: 'TX'
+        led_color: 'orange'
+    Indicator:
+        id: _fault
+        text: 'FAULT'
+        led_color: 'red'
+    Label:
+        bold: True
+        underline: True
+        text: root.site_name
+        text_size: self.size
+        shorten: True
+        shorten_from: 'right'
+        halign: 'center'
+        valign: 'center'
+
+

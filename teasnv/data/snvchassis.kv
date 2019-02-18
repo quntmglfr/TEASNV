@@ -8,8 +8,9 @@
     RelativeLayout:
         site_number: 0
         Button:
-            on_press: root.screen_manager.manager.current = 'sitesscreen'
-            on_press: _control_processor.connection_button.state = 'normal'
+            on_press:
+                root.screen_manager.manager.current = 'sitesscreen'
+                _control_processor.connection_button.state = 'normal'
         Label:
             bold: True
             text: root.channel_name

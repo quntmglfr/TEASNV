@@ -56,4 +56,8 @@ class SiteVoter(BoxLayout):
         self.tx_select_indicator.led_active = value
 
     def on_transmit(self, instance, value):
-        self.transmit_indicator.led_active = value
+        # self.transmit_indicator.led_active = value
+        if value:
+            self.tx_select_indicator.led_color = 'orange'
+        else:
+            self.tx_select_indicator.led_color = 'red'

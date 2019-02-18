@@ -2,15 +2,18 @@
 
 #:import RiseInTransition kivy.uix.screenmanager.RiseInTransition
 
-<TeaSnv>:
+<TeaSnv@ScreenManager>:
     transition: RiseInTransition()
-    Screen:
-        id: _snv_screen
-        name: 'snvscreen'
-        SnvChassis:
-            screen_manager: _snv_screen
     Screen:
         id: _sites_screen
         name: 'sitesscreen'
         SitesScreen:
             screen_manager: _sites_screen
+    Screen:
+        id: _snv_screen
+        name: 'snvscreen'
+        SnvChassis:
+            screen_manager: _snv_screen
+
+TeaSnv:
+    current: 'sitesscreen'

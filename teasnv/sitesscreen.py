@@ -12,4 +12,5 @@ class SitesScreen(Screen):
         self.config.set('network', 'host', kwargs['host'])
         self.config.set('network', 'port', kwargs['port'])
         self.config.set('network', 'password', kwargs['password'])
+        self.config.write()
         self.parent.parent.current = 'snvscreen'

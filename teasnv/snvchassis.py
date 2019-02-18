@@ -2,7 +2,7 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
 from kivy.uix.popup import Popup
 from kivy.properties import StringProperty, ListProperty
-from sitevoter import SiteVoter
+from teasnv.sitevoter import SiteVoter
 
 
 class SnvChassis(BoxLayout):

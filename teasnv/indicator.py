@@ -12,6 +12,7 @@ class Indicator(BoxLayout):
 
     def on_led_active(self, instance, value):
         if value:
-            self.indicator_led.source = 'led-circle-' + self.led_color + '.png'
+            path = 'data/led-circle-' + self.led_color + '.png'
+            self.indicator_led.source = path
         else:
-            self.indicator_led.source = 'led-circle-grey.png'
+            self.indicator_led.source = 'data/led-circle-grey.png'

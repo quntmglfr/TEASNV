@@ -1,5 +1,4 @@
 # -*- mode: python -*-
-# test 123
 from kivy.deps import sdl2, glew
 
 block_cipher = None
